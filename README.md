@@ -25,6 +25,16 @@ where:
 
 The PID outputs are then limited to a maximum value to prevent overdriving the motors.
 
+The calculate_pid() function that you provided is used to calculate the PID outputs for the roll, pitch, and yaw axes of a drone. The PID outputs are then used to control the speed of the motors.
+
+The function works as follows:
+* For each axis (roll, pitch, and yaw):
+  * Calculate the PID error by subtracting the desired angular rate (PID setpoint) from the actual angular rate (gyro input).
+  * Calculate the integral term by adding the product of the PID error and the integral gain to the integral memory variable.
+  * Calculate the derivative term by subtracting the previous PID error from the current PID error and multiplying by the derivative gain.
+  * Calculate the PID output by summing the proportional, integral, and derivative terms.
+  * Limit the PID output to the maximum value for that axis.
+
 ## Motor control
 
 The last section of the code sets the speed of the motors based on the PID outputs. The speed of the motors is controlled by sending a PWM signal to the electronic speed controllers (ESCs).
