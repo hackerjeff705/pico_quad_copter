@@ -16,12 +16,12 @@ The PID controller calculates the PID outputs using the following equation:
 ```PID output = Kp * error + Ki * integral + Kd * derivative```
 
 where:
-* Kp is the proportional gain
-* Ki is the integral gain
-* Kd is the derivative gain
-* error is the difference between the desired setpoint and the current value
-* integral is the sum of the past errors
-* derivative is the rate of change of the error signal
+* ```Kp``` is the proportional gain
+* ```Ki``` is the integral gain
+* ```Kd``` is the derivative gain
+* ```error``` is the difference between the desired setpoint and the current value
+* ```integral``` is the sum of the past errors
+* ```derivative``` is the rate of change of the error signal
 
 The PID outputs are then limited to a maximum value to prevent overdriving the motors.
 
